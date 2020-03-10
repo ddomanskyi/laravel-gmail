@@ -1,5 +1,5 @@
 {
-  "name": "ddomanskyi/laravel-gmail-multiaccounts",
+  "name": "ddomanskyi/laravel-gmail",
   "description": "Gmail API package for Laravel from Ddomanskyi (https://github.com/Ddomanskyi/laravel-gmail/) with multiaccounts handling improvement",
   "keywords": [
     "api",
