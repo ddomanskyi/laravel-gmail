@@ -50,18 +50,14 @@ trait Configurable
 
 	private function getFileName()
 	{
+		$userId = auth()->id();
+
 		if ($this->tokenFile) {
 			$credentialFilename = $this->tokenFile;
 		} else {
 			$credentialFilename = $this->_config['gmail.credentials_file_name'];
 		}
-
-		if (property_exists(get_class($this), 'userId') && $this->userId) {
-			$userId = $this->userId;
-		} elseif (auth()->user()) {
-			$userId = auth()->user()->id;
-		}
-
+    
 		$allowMultipleCredentials = $this->_config['gmail.allow_multiple_credentials'];
 
 		if (isset($userId) && $allowMultipleCredentials) {
